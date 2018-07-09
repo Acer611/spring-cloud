@@ -14,10 +14,19 @@ import org.springframework.web.bind.annotation.RestController;
 public class ComputeController {
 
 
+    /**
+     * 加法
+     * @param operand1
+     * @param operand2
+     * @return
+     */
     @GetMapping("/add")
     public Integer add(@RequestParam Integer operand1, @RequestParam Integer operand2) {
         int sum = operand1 + operand2;
         System.out.println(sum);
         return sum;
     }
+
+
+
 }

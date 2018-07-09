@@ -37,5 +37,8 @@ dependencies {
 	//需要注意的是,当使用spring-boot-configuration-processor库时会默认打开RabbitAutoConfiguration,
 	// 它会自动创建一个 CachingConnectionFactory对象，一个RabbitTemplate对象，一个AmqpAdmin对象以及一个RabbitMessageTemplate对象。
 	compile group: 'org.springframework.boot', name: 'spring-boot-configuration-processor', version: '2.0.3.RELEASE'
+	// https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-config
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-config', version: '2.0.0.RELEASE'
+
 
 }
