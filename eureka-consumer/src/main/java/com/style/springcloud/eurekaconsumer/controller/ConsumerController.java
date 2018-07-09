@@ -32,6 +32,10 @@ public class ConsumerController {
     FileUploadService fileUploadService;
 
 
+    /**
+     * 简单的加法
+     * @return
+     */
     @ResponseBody
     @GetMapping("/add")
     public int operation(){
@@ -40,6 +44,10 @@ public class ConsumerController {
     }
 
 
+    /**
+     * 文件上传
+     * @throws FileNotFoundException
+     */
     @ResponseBody
     @GetMapping("/upload")
     public void fileUpload() throws FileNotFoundException {
