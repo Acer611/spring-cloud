@@ -36,7 +36,6 @@ public class ConsumerController {
      * 简单的加法
      * @return
      */
-    @ResponseBody
     @GetMapping("/add")
     public int operation(){
         int summer = consumer.consumer(3,3);
