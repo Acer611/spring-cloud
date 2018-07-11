@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: api-gateway
+
+server:
+  port: 4444
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+
+#  single-instance
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: eureka-consumer
+
+#  multi-instance
+#    api-b:
+#      path: /api-b/**
+#      serviceId: api-b
+
+#api-b:
+#  ribbon:
+#    listOfServers: http://localhost:3333/, http://localhost:3334/
