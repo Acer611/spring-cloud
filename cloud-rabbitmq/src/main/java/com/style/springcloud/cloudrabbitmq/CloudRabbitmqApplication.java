@@ -8,9 +8,9 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 
-@Configuration
-@ComponentScan("com.style.springcloud.cloudrabbitmq")
-@EnableAutoConfiguration(exclude = RabbitAutoConfiguration.class)
+//@Configuration
+//@ComponentScan("com.style.springcloud.cloudrabbitmq.controller")
+//@EnableAutoConfiguration(exclude = RabbitAutoConfiguration.class)
 @SpringBootApplication
 public class CloudRabbitmqApplication {
 

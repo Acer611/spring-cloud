@@ -32,8 +32,8 @@ public class RabbitAutoConfiguration {
     public CachingConnectionFactory connectionFactory() {
         CachingConnectionFactory connectionFactory = new CachingConnectionFactory();
         connectionFactory.setAddresses("127.0.0.1:5672");
-        connectionFactory.setUsername("guest");
-        connectionFactory.setPassword("guest");
+        connectionFactory.setUsername("root");
+        connectionFactory.setPassword("root");
         connectionFactory.setVirtualHost("/");
         connectionFactory.setPublisherConfirms(true); //必须要设置
         return connectionFactory;
