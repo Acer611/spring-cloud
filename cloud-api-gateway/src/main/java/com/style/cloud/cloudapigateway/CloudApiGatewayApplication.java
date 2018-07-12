@@ -13,10 +13,10 @@ import org.springframework.context.annotation.Bean;
 public class CloudApiGatewayApplication {
 
 
-   /* @Bean
+    @Bean
     public AccessFilter accessFilter() {
         return new AccessFilter();
-    }*/
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(CloudApiGatewayApplication.class, args);
