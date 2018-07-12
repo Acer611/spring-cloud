@@ -16,6 +16,10 @@ zuul:
     api-a:
       path: /api-a/**
       serviceId: eureka-consumer
+  host:
+    connect-timeout-millis: 3000
+    socket-timeout-millis: 3000
+
 
 #  multi-instance
 #    api-b:
@@ -25,3 +29,18 @@ zuul:
 #api-b:
 #  ribbon:
 #    listOfServers: http://localhost:3333/, http://localhost:3334/
+
+
+#添加ribbon的超时时间设置
+ribbon:
+  ReadTimeout: 3000
+  ConnectTimeout: 3000
+
+
+hystrix:
+    command:
+        default:
+            execution:
+                isolation:
+                    thread:
+                        timeout-in-milliseconds: 3000

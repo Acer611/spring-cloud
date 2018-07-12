@@ -19,6 +19,10 @@ public class CloudApiGatewayApplication {
     public AccessFilter accessFilter() {
         return new AccessFilter();
     }
+    @Bean
+    public ErrorFilter errorFilter() {
+        return new ErrorFilter();
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(CloudApiGatewayApplication.class, args);

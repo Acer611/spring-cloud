@@ -22,7 +22,7 @@ public class ComputeController {
      */
     @GetMapping("/add")
     public Integer add(@RequestParam Integer operand1, @RequestParam Integer operand2) throws InterruptedException {
-        //Thread.sleep(2000L);
+        Thread.sleep(2000L);
         int sum = operand1 + operand2;
         System.out.println(sum);
         return sum;

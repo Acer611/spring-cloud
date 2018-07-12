@@ -4,6 +4,7 @@ package com.style.cloud.cloudapigateway;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
+import org.springframework.cloud.netflix.ribbon.support.RibbonCommandContext;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
@@ -50,6 +51,7 @@ public class AccessFilter extends ZuulFilter {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
 
+
         System.out.println("send {} request to {}"+request.getMethod()+ request.getRequestURL().toString());
 
         Object accessToken = request.getParameter("accessToken");
@@ -60,6 +62,7 @@ public class AccessFilter extends ZuulFilter {
             ctx.setResponseBody("You don't have permission to access this URL");
             return null;
         }
+
         System.out.println("access token ok");
         return null;
     }
