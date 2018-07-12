@@ -7,6 +7,8 @@ import org.springframework.context.annotation.Bean;
 
 /**
  * 使用@EnableZuulProxy注解开启Zuul的功能。
+ * @Auth Gaofei
+ * @Date 2018-07-11
  */
 @EnableZuulProxy
 @SpringBootApplication

@@ -8,6 +8,11 @@ import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * 路由器设置
+ * @Auth Gaofei
+ * @Date 2018-07-12
+ */
 @Component
 public class AccessFilter extends ZuulFilter {
 

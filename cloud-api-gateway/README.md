@@ -13,5 +13,10 @@
   
 比如访问：http://localhost:4444/eureka-consumer/consumer/add  ，该请求将最终被路由到eureka-consumer的/dc接口上。  
 
-http://localhost:4444/api-a/consumer/add   通过api-a 路由到eureka-consumer  类似nginx
+http://localhost:4444/api-a/consumer/add   通过api-a 路由到eureka-consumer  类似nginx  
+
+Zuul加入过滤器后必须满足过滤器的过滤条件才能通过请求，目前代码中是过滤请求中必须含有accessToken  
+所以当访问上面的请求  http://localhost:4444/api-a/consumer/add  会提提示run方法中的示没有权限访问的提示  
+只能加入accessToken的参数如下面的链接  
+http://localhost:4444/api-a/consumer/add?accessToken=a
 
