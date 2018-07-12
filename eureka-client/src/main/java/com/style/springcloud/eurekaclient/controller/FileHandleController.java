@@ -1,6 +1,7 @@
 package com.style.springcloud.eurekaclient.controller;
 
 
+import io.swagger.annotations.Api;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
  * @author  Gaofei
  * @Date 2018-07-09
  */
+@Api(tags = "文件上传API")
 @RestController
 @RequestMapping(value = "/file")
 public class FileHandleController {

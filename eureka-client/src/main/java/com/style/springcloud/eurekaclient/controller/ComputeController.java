@@ -1,6 +1,7 @@
 package com.style.springcloud.eurekaclient.controller;
 
 
+import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author  Gaofei 2018-07-05
  *
  */
+@Api(tags = "Provider 提供简单加法的API")
 @RestController
 public class ComputeController {
 

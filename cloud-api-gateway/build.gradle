@@ -32,6 +32,9 @@ dependencies {
     compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-server')
     compile('org.springframework.cloud:spring-cloud-starter-netflix-zuul')
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    // https://mvnrepository.com/artifact/com.k4hub/swagger2-spring-boot-starter
+    compile group: 'com.k4hub', name: 'swagger2-spring-boot-starter', version: '1.0-RELEASE'
+
 }
 
 dependencyManagement {

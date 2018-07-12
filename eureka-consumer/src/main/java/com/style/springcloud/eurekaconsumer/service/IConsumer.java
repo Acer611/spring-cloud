@@ -1,7 +1,6 @@
 package com.style.springcloud.eurekaconsumer.service;
 
 
-import com.style.springcloud.eurekaconsumer.config.FooConfiguration;
 import com.style.springcloud.eurekaconsumer.config.HystrixClientFallback;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

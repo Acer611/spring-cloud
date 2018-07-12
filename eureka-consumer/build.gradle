@@ -47,6 +47,8 @@ dependencies {
 
 	// https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-feign
 	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-feign', version: '1.4.5.RELEASE'
+	// https://mvnrepository.com/artifact/com.k4hub/swagger2-spring-boot-starter
+	compile group: 'com.k4hub', name: 'swagger2-spring-boot-starter', version: '1.0-RELEASE'
 
 
 

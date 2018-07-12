@@ -16,6 +16,10 @@ zuul:
     api-a:
       path: /api-a/**
       serviceId: eureka-consumer
+
+    api-b:
+      path: /api-b/**
+      serviceId: eureka-client
   host:
     connect-timeout-millis: 3000
     socket-timeout-millis: 3000

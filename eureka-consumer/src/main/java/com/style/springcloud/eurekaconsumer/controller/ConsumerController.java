@@ -2,6 +2,7 @@ package com.style.springcloud.eurekaconsumer.controller;
 
 import com.style.springcloud.eurekaconsumer.service.FileUploadService;
 import com.style.springcloud.eurekaconsumer.service.IConsumer;
+import io.swagger.annotations.Api;
 import org.apache.commons.fileupload.disk.DiskFileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.io.IOUtils;
@@ -21,6 +22,7 @@ import java.io.*;
  *
  *
  */
+@Api(tags = "消费者的API")
 @RestController
 @RequestMapping("/consumer")
 public class ConsumerController {

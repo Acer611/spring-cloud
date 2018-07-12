@@ -5,8 +5,13 @@ eureka-service为注册中心
 eureka-client充当prvider的角色，注册到注册中心  
 eureka-consumer充当consumer的角色 已注册到注册中心 
 cloud-api-gateway   网关服务    
--------2018-07-09 ------  
-尝试使用fegin的上传功能
+  
+网关服务中加入swagger2可以抓取Provider和consumer的已有接口  
+当四个服务都启动后，可以通过访问 http://localhost:4444/swagger-ui.html#/   
+查看eureka-client和eureka-consumer的接口  
+  
+网关服务中已加入过滤器，访问时请务必加入参数accessstToken否侧将提示没有权限  
+也可自行注释掉过滤器的代码运行 
 
 
 springcloud 成功能列表

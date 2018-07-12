@@ -1,4 +1,4 @@
-package com.style.cloud.cloudapigateway;
+package com.style.cloud.cloudapigateway.fillter;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 错误过滤
+ * @author  Gaofei
+ * @Date   2018-07-12
  */
 @Component
 public class ErrorFilter extends ZuulFilter {

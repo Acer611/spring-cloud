@@ -1,10 +1,9 @@
 
-package com.style.cloud.cloudapigateway;
+package com.style.cloud.cloudapigateway.fillter;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
-import org.springframework.cloud.netflix.ribbon.support.RibbonCommandContext;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
@@ -50,7 +49,12 @@ public class AccessFilter extends ZuulFilter {
 
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
-
+        String url =request.getRequestURL().toString();
+        System.out.println("**************************URL :"+ url);
+        System.out.println("HTTP_METHOD : " + request.getMethod());
+        if(url.contains("swagger")||url.contains("/v2/api-docs")){
+            return null;
+        }
 
         System.out.println("send {} request to {}"+request.getMethod()+ request.getRequestURL().toString());
 
