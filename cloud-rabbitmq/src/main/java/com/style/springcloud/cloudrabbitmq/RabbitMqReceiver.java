@@ -17,7 +17,7 @@ import org.springframework.cloud.stream.messaging.Sink;
 //通过@RabbitListener注解定义该类对hello队列的监听，并用@RabbitHandler注解来指定对消息的处理方法
 
 
-//@RabbitListener(queues = "hello")
+@RabbitListener(queues = "hello")
 @EnableBinding(Sink.class)
 public class RabbitMqReceiver {
 
@@ -26,9 +26,10 @@ public class RabbitMqReceiver {
         System.out.println("Received: " + payload);
     }
 
-   // @RabbitHandler
-  /*  public void receive(String content) {
-        System.out.println("Receiver : " + content);
-    }*/
+    @RabbitHandler
+    public void receive1(String content) {
+        System.out.println("Receiver1 : " + content);
+    }
+
 
 }
