@@ -20,7 +20,7 @@ springcloud 功能列表
 2.分布式配置中心(spring config)----------   TODO   
 3.服务器容错保护(hystrix)  --------------	DONE  (高级功能待研究)  
 4.服务网关(Zuul)   			-------------   DONE  已实现简单路由和过滤器功能  
-5.消息驱动(RabbbitMQ)  		-------------   DONE  单发布 、单订阅已完成 (多sender 和多receiver 待完善)
+5.消息驱动(RabbbitMQ)  		-------------   DONE  单发布 、单订阅已完成 (多sender 和多receiver  Topic Exchange完成)
 6.分布式服务跟踪()  		-------------	TODO
 
 
