@@ -7,6 +7,8 @@ import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.cloud.stream.messaging.Sink;
 
+import java.util.Map;
+
 /**
  * 消息队列接受类
  * @author  Gaofei
@@ -21,14 +23,19 @@ import org.springframework.cloud.stream.messaging.Sink;
 @EnableBinding(Sink.class)
 public class RabbitMqReceiver {
 
-    @StreamListener(Sink.INPUT)
+   /* @StreamListener(Sink.INPUT)
     public void receive(Object payload) {
         System.out.println("Received: " + payload);
-    }
+    }*/
 
     @RabbitHandler
     public void receive1(String content) {
-        System.out.println("Receiver1 : " + content);
+        System.out.println("RabbitMqReceiver1----->Receiver1 : " + content);
+    }
+
+    @RabbitHandler
+    public void receive2(Map content) {
+        System.out.println("RabbitMqReceiver1----->Receiver2 : " + content);
     }
 
 
