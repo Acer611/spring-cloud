@@ -2,6 +2,7 @@ package com.style.springcloud.cloudrabbitmq.controller;
 
 
 import com.style.springcloud.cloudrabbitmq.RabbitMqSender;
+import com.style.springcloud.cloudrabbitmq.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -31,4 +32,16 @@ public class RabbitMqController {
     public void addEntity() {
         rabbitMqSender.send("你好啊，李银河！！");
     }
+
+    @RequestMapping(value = "/addUser", method = RequestMethod.GET)
+    @ResponseBody
+    public void addUser(){
+        User user = new User();
+        user.setName("奇衡三");
+        user.setAge(20);
+        rabbitMqSender.addUser(user);
+
+    }
+
+
 }

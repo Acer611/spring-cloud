@@ -1,6 +1,7 @@
 package com.style.springcloud.cloudrabbitmq;
 
 
+import com.style.springcloud.cloudrabbitmq.controller.RabbitMqController;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -25,4 +26,11 @@ public class RabbitMqSender {
         this.amqpTemplate.convertAndSend("hello", content);
 
     }
+
+    public void addUser(User user) {
+
+        this.amqpTemplate.convertAndSend("hello", user);
+    }
+
+
 }
