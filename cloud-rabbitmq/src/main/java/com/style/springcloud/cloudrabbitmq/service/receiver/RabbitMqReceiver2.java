@@ -1,7 +1,6 @@
-package com.style.springcloud.cloudrabbitmq.controller;
+package com.style.springcloud.cloudrabbitmq.service.receiver;
 
 
-import com.style.springcloud.cloudrabbitmq.RabbitMqSender;
 import com.style.springcloud.cloudrabbitmq.User;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -22,7 +21,7 @@ import java.util.Map;
 
 @RabbitListener(queues = "hello")
 @EnableBinding(Sink.class)
-public class RabbitMqReceiver3 {
+public class RabbitMqReceiver2 {
 
    /* @StreamListener(Sink.INPUT)
     public void receive(Object payload) {
@@ -31,18 +30,16 @@ public class RabbitMqReceiver3 {
 
     @RabbitHandler
     public void receive1(String content) {
-        System.out.println("RabbitMqReceiver3----->Receiver1 : " + content);
+        System.out.println("RabbitMqReceiver2----->Receiver1 : " + content);
     }
 
     @RabbitHandler
     public void receive2(Map content) {
-        System.out.println("RabbitMqReceiver3----->Receiver2 : " + content);
+        System.out.println("RabbitMqReceiver2----->Receiver2 : " + content);
     }
 
     @RabbitHandler
     public void receive3(User user) {
-        System.out.println("RabbitMqReceiver3----->Receiver3 : " + user.getName() + "   " +user.getAge());
+        System.out.println("RabbitMqReceiver2----->Receiver3 : " + user.getName() + "   " +user.getAge());
     }
-
-
 }

@@ -1,6 +1,7 @@
-package com.style.springcloud.cloudrabbitmq;
+package com.style.springcloud.cloudrabbitmq.service.sender;
 
 
+import com.style.springcloud.cloudrabbitmq.User;
 import com.style.springcloud.cloudrabbitmq.controller.RabbitMqController;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;

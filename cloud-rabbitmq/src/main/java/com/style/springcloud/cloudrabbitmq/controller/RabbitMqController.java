@@ -1,7 +1,8 @@
 package com.style.springcloud.cloudrabbitmq.controller;
 
 
-import com.style.springcloud.cloudrabbitmq.RabbitMqSender;
+import com.style.springcloud.cloudrabbitmq.service.sender.RabbitMQsender2;
+import com.style.springcloud.cloudrabbitmq.service.sender.RabbitMqSender;
 import com.style.springcloud.cloudrabbitmq.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +23,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class RabbitMqController {
     @Autowired
     private RabbitMqSender rabbitMqSender;
+    @Autowired
+    private RabbitMQsender2 rabbitMQsender2;
 
 
     /**
@@ -42,6 +45,15 @@ public class RabbitMqController {
         rabbitMqSender.addUser(user);
 
     }
+
+    @RequestMapping(value = "/send", method = RequestMethod.GET)
+    @ResponseBody
+    public void send() {
+
+        rabbitMQsender2.send1();
+        rabbitMQsender2.send2();
+    }
+
 
 
 }
