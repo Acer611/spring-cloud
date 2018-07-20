@@ -4,6 +4,9 @@ import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ * MQ发送者类
+ */
 @Component
 public class RabbitMQsender2 {
 

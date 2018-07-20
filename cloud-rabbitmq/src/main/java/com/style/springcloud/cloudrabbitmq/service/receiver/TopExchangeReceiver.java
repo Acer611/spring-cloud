@@ -1,14 +1,12 @@
 package com.style.springcloud.cloudrabbitmq.service.receiver;
-
-import com.style.springcloud.cloudrabbitmq.User;
-import com.style.springcloud.cloudrabbitmq.config.TopicRabbitConfig;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Sink;
 
-import java.util.Map;
-
+/**
+ * 定义指定消息队列接收类
+ */
 @RabbitListener(queues = "topic.message")
 @EnableBinding(Sink.class)
 public class TopExchangeReceiver {

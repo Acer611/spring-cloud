@@ -5,6 +5,10 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Sink;
 
+
+/**
+ * 定义指定消息队列接收类
+ */
 @RabbitListener(queues = "topic.messages")
 @EnableBinding(Sink.class)
 public class TopExchangeReceiverQueue2 {

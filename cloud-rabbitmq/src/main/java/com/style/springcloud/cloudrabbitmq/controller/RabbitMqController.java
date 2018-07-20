@@ -36,6 +36,11 @@ public class RabbitMqController {
         rabbitMqSender.send("你好啊，李银河！！");
     }
 
+
+
+    /**
+     * 发送测试消息队列
+     */
     @RequestMapping(value = "/addUser", method = RequestMethod.GET)
     @ResponseBody
     public void addUser(){
@@ -46,6 +51,10 @@ public class RabbitMqController {
 
     }
 
+
+    /**
+     * 发送测试消息队列
+     */
     @RequestMapping(value = "/send", method = RequestMethod.GET)
     @ResponseBody
     public void send() {
