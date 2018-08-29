@@ -24,12 +24,24 @@ public class AccessFilter extends ZuulFilter {
     }
 
 
+    /**
+     * 在Zuul中默认定义了四种不同生命周期的过滤器类型，具体如下：
+     * pre：可以在请求被路由之前调用。
+     * routing：在路由请求时候被调用。
+     * post：在routing和error过滤器之后被调用。
+     * error：处理请求时发生错误时被调用。
+     *
+     */
+
     //过滤器的执行顺序。当请求在一个阶段中存在多个过滤器时，需要根据该方法返回的值来依次执行。
+    //通过int值来定义过滤器的执行顺序，数值越小优先级越高
     @Override
     public int filterOrder() {
         return 0;
     }
+    
 
+    //返回一个boolean类型来判断该过滤器是否要执行。我们可以通过此方法来指定过滤器的有效范围。
     //判断该过滤器是否需要被执行。这里我们直接返回了true，因此该过滤器对所有请求都会生效。实际运用中我们可以利用该函数来指定过滤器的有效范围
     @Override
     public boolean shouldFilter() {

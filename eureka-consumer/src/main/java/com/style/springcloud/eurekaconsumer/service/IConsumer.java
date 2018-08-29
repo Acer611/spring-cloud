@@ -1,6 +1,7 @@
 package com.style.springcloud.eurekaconsumer.service;
 
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.style.springcloud.eurekaconsumer.config.HystrixClientFallback;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
